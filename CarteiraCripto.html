@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="UTF-8">
+    <title>Market Crypto</title>
+
+    <link rel="stylesheet" type="text/css" href="Style.css"/>
+    <script src="mainJs.js"></script>
+    
+    <script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+
+
+
+
+
+  </head>
+  
+  
+  <body>
+
+    <div >
+    
+      
+        <table border="1" align="right" >
+          
+            <tr>
+                <td style="text-align: center; background-color: rgb(184, 219, 95);"><b>Usuario</b></td>
+                <td style="text-align: center; background-color: rgb(184, 219, 95);"><b>Saldo</b></td>
+            </tr>
+
+            <tr> 
+                <td style="background-color: black;color: yellowgreen;"> 🤑 <input id="usuario"  type="text" style="text-align: center; background-color: black;color: yellowgreen;  " value="Fillipe" readonly></td>
+                <td style="background-color: black;color: yellowgreen;"> 💲 <input id="saldoInicial"  type="text" style="text-align: center; background-color: rgb(0, 0, 0);color: yellowgreen;" value="150" readonly ></td>
+
+            </tr>
+        </table>
+    
+    </div>
+   
+    <script>
+                    
+                    var nome = prompt ( "digite seu nome");
+                    var nomeInicial = document.getElementById("usuario").value;
+                    var nome2 = nome;
+                    document.getElementById("usuario").value = nome2;
+
+                    let saldoInicialInput = document.getElementById("saldoInicial");
+                    let saldoInicial = parseFloat(saldoInicialInput.value);
+                    let formattedSaldoInicial = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(saldoInicial);
+                    saldoInicialInput.value = formattedSaldoInicial;
+               
+    </script>
+
+    
+
+   <!-- <div class="navbar-buttons  mbr-section-btn"><a class="btn btn-warning display-4" href="file:///F:/Backup/Pasta%20Backup%20DESKTOP/Temp/Work%20Free/Jelly's/GeradorPix/HTMLPix-AllInOne-master/HTMLPix-AllInOne-master/Backup/Compra%20Segura%20Jelly/index.html">Compra Segura</a></div>
+    -->
+    <p></p>
+<div >
+    <div><h1>₿ Market Crypto </a></h1></div>
+    <fieldset>
+    <table border="1" style="width: 100%;">
+        <legend>Cotação Atual em Tempo Real 💹</legend>
+     
+        <tr>
+          <th>Coin</th>
+          <th>Preço (BRL)</th>
+        </tr>
+
+      
+        <tr class="coin">
+         
+          <td><img src="Midias/ETH.png" style="width: 20px;" alt="ETH-IMG"> Ethereum (ETH)   </td>
+          <td><span id="eth-price"> </span></td>
+        </tr>
+        
+        <tr class="coin">
+          <td><img src="Midias/BTC.png" style="width: 20px;" alt="BTC-IMG">  Bitcoin (BTC)  </td>
+          <td><span id="btc-price"></span></td>
+        </tr>
+       
+        <tr class="coin">
+          <td> <img src="Midias/XRP.png" style="width: 20px;" alt="XRM-IMG"> Monero (XMR)  </td>
+          <td><span id="xmr-price"></span></td>
+        </tr>
+       
+        <tr class="coin">
+          <td> <img src="Midias/BNB.png" style="width: 20px;" alt="BNB-IMG"> Binance Coin (BNB)  </td>
+          <td><span id="bnb-price"></span></td>
+        </tr>
+      
+                </table>
+            </fieldset>
+            </div>
+                <BR>
+                    <div style="text-align: center;">
+                        <h3>QUAL VALOR DESEJA INVESTIR EM REAIS</h3>
+                        <input type="number" id="valorInvestido" style="text-align: center;" placeholder=" DIGITE UM VALOR" required><p></p>
+                         </div>
+                        <BR>
+
+
+                    <fieldset>   
+                        <legend>ESCOLHA A MOEDA QUE DESEJA COMPRAR </legend>     
+                        <form name="opcao">
+                        <ol> 
+                        
+                        <li><input type = "radio" name="input1" id="input1"    onchange="CalculaValor"> <label for="input1">BTC</label></li>
+                        <li> <input type = "radio" name="input1" id="input2"   onchange="CalculaValor"> <label for="input2"> ETH</label></li>
+                        <li><input type = "radio" name="input1" id="input3"   onchange="CalculaValor"> <label for="input3">MONERO</label></li>
+                        <li><input type = "radio" name="input1" id="input4"   onchange="CalculaValor"> <label for="input4">BNB</label></li>
+
+                        
+                </ol>
+                <button type="button" style="width: 45%; background-color: rgb(184, 219, 95); color: rgb(13, 13, 13);" onclick="VerficaSaldo()"> Investir </button>
+                <button type="reset" style="width: 45%; background-color: rgb(184, 219, 95); color: rgb(23, 25, 27);" >Limpar</button>
+                </form>
+                </fieldset>
+
+                <p></p>
+
+
+                            <p></p>
+                            <fieldset>
+                                <legend style="text-align: center;"><b>Resumo Carteira</b></legend>
+                                <li><span id="linha1"></span></li><br>
+                                <li><span id="linha2"></span></li><br>
+                                <li><span id="linha3"></span></li>
+                                <li><span id="linha4"></span></li><br>
+                                <li><span id="linha5"></span></li>
+                                <li><span id="linha6"></span></li>
+                                <li><span id="linha7"></span></li>
+                            </fieldset>
+
+                            <p></p>
+                            <div style="text-align: center;">
+                            <button style="width: 20%; background-color: black; color: aliceblue;" onclick="openPopup()">Depositar Saldo</button>
+                            <button style="width: 20%; background-color: black; color: aliceblue;" onclick="openPopup()">Retirada Saldo</button>
+                            </div>
+                            </body>
+                            </html>

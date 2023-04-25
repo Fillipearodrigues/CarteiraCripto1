@@ -1,0 +1,53 @@
+.coin :hover { 
+  color: #59ca14;
+  font-weight: bold;
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: #f4ecec;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+    line-height: 0;
+    cursor: pointer;
+  }
+  .close-btn:hover {
+    background-color: #1faf2d;
+  }
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    max-width: 400px;
+    background-color: #efe6e6;
+    border-radius: 28px;
+    box-shadow: 0 14px 18px rgba(223, 6, 6, 0.4);
+    padding: 74px;
+    z-index: 9999;
+    border: 1, #bb0404;
+    
+  }
+  .popup::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background-color: rgba(18, 146, 127, 0.6);
+    z-index: -1;
+  }
+
+  .center {
+    text-align: left;
+    position: fixed;
+    top: 0%;
+  }
